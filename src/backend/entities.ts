@@ -9,5 +9,4 @@ export type StudyTopic = {
 export type StudyTopicInfo = {
   name: string,
   description: string | null,
-  creation_date: string
 }
