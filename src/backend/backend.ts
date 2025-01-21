@@ -3,7 +3,7 @@ import { StudyTopic, StudyTopicInfo } from "./entities"
 
 
 
-const remoteUrl = "https://study-app-backend.fly.dev/"
+const remoteUrl = "https://study-app-backend.fly.dev"
 // const localUrl = "http://localhost:3000"
 const baseUrl = remoteUrl
 
