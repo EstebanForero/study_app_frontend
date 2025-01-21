@@ -29,7 +29,7 @@ const StudyTopicComponent = ({ studyTopic }: Props) => {
   })
 
   return (
-    <div className="bg-gray-900 w-96 h-60 rounded-xl shadow-black shadow-lg p-4 flex flex-col" key={studyTopic.id} >
+    <div className="bg-gray-900 w-96 h-60 rounded-xl shadow-black shadow-lg p-4 flex flex-col flex-shrink-0 mb-6" key={studyTopic.id} >
       <div className="flex flex-row justify-between">
         <h2 className="text-white text-lg font-semibold ml-3">{studyTopic.name}</h2>
         <button className="bg-red-600 rounded-xl px-2 text-white"

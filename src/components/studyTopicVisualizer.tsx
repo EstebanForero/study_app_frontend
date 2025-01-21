@@ -11,7 +11,7 @@ const StudyTopicVisualizer = () => {
   })
 
   return (
-    <div className="flex flex-row gap-4">
+    <div className="flex flex-row gap-4 overflow-x-auto scrollbar">
       <StudyTopicAdder />
       {studyTopics?.map(studyTopic => <StudyTopicComponent studyTopic={studyTopic} key={studyTopic.id} />)}
     </div>

@@ -1,8 +1,11 @@
 import ky from "ky"
 import { StudyTopic, StudyTopicInfo } from "./entities"
 
-const localUrl = "http://localhost:3000"
-const baseUrl = localUrl
+
+
+const remoteUrl = "https://study-app-backend.fly.dev/"
+// const localUrl = "http://localhost:3000"
+const baseUrl = remoteUrl
 
 export async function getStudyTopics(): Promise<StudyTopic[]> {
   return await ky.get('study_topics', { prefixUrl: baseUrl }).json()

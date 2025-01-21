@@ -39,7 +39,7 @@ const StudyTopicAdder = () => {
   return (
 
 
-    <div className="bg-gray-900 w-96 h-60 rounded-xl shadow-black shadow-lg p-4 flex-row">
+    <div className="bg-gray-900 w-96 h-60 rounded-xl shadow-black shadow-lg p-4 flex-row flex-shrink-0">
       <input placeholder="Task name" value={studyTopicInfo.name} className="text-white bg-gray-800 w-full p-3 rounded-xl outline-none mb-4"
         onChange={(e) => setStudyTopicInfo({
           ...studyTopicInfo,
