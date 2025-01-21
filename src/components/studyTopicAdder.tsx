@@ -32,6 +32,7 @@ const StudyTopicAdder = () => {
     },
     onSettled: () => {
       queryClient.invalidateQueries({ queryKey: ["studyTopics"] })
+      queryClient.invalidateQueries({ queryKey: ["studyTopicsToday"] })
     }
   })
 

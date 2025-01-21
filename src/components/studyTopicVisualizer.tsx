@@ -13,7 +13,7 @@ const StudyTopicVisualizer = () => {
   return (
     <div className="flex flex-row gap-4">
       <StudyTopicAdder />
-      {studyTopics?.map(studyTopic => <StudyTopicComponent studyTopic={studyTopic} />)}
+      {studyTopics?.map(studyTopic => <StudyTopicComponent studyTopic={studyTopic} key={studyTopic.id} />)}
     </div>
   )
 }

@@ -25,5 +25,5 @@ export async function deleteStudyTopic(topicId: number) {
 
 export async function getStudyTopicsForToday(): Promise<StudyTopic[]> {
 
-  return await ky.get(`study_topic_today`, { prefixUrl: baseUrl }).json()
+  return await ky.get(`study_topics_today`, { prefixUrl: baseUrl }).json()
 }
