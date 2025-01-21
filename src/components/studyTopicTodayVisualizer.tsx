@@ -1,21 +1,19 @@
 import { useQuery } from "@tanstack/react-query"
-import StudyTopicAdder from "./studyTopicAdder"
-import { getStudyTopics } from "../backend/backend"
+import { getStudyTopicsForToday } from "../backend/backend"
 import StudyTopicComponent from "./studyTopic"
 
-const StudyTopicVisualizer = () => {
+const StudyTopicTodayVisualizer = () => {
 
   const { data: studyTopics } = useQuery({
     queryKey: ['studyTopics'],
-    queryFn: getStudyTopics
+    queryFn: getStudyTopicsForToday
   })
 
   return (
-    <div className="flex flex-row gap-4">
-      <StudyTopicAdder />
+    <div className="flex flex-row gap-4 flex-wrap">
       {studyTopics?.map(studyTopic => <StudyTopicComponent studyTopic={studyTopic} />)}
     </div>
   )
 }
 
-export default StudyTopicVisualizer
+export default StudyTopicTodayVisualizer

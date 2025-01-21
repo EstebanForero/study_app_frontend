@@ -17,8 +17,13 @@ export async function addStudyTopic(studyTopicInfo: StudyTopicInfo) {
   })
 }
 
-export async function deleteStudyTopic(topicId: StudyTopicInfo) {
+export async function deleteStudyTopic(topicId: number) {
   console.log(`sending delete study topic request: ${JSON.stringify(topicId)}`)
 
-  return await ky.post(`study_topic/${topicId}`, { prefixUrl: baseUrl })
+  return await ky.delete(`study_topic/${topicId}`, { prefixUrl: baseUrl })
+}
+
+export async function getStudyTopicsForToday(): Promise<StudyTopic[]> {
+
+  return await ky.get(`study_topic_today`, { prefixUrl: baseUrl }).json()
 }

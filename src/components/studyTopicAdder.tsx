@@ -63,7 +63,7 @@ function getCurrentDate(): string {
   const month = currentDate.getMonth() + 1;
   const year = currentDate.getFullYear();
 
-  return `${day}-${month}-${year}`;
+  return `${year}-${month}-${day}`;
 }
 
 export default StudyTopicAdder
