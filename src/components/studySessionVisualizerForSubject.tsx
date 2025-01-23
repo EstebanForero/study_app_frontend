@@ -15,8 +15,8 @@ const StudySessionVisualizerForSubject = ({ subject }: Props) => {
   })
 
   return (
-    <div>
-      {studySessions?.map(studySession => (<StudySessionComponent studySession={studySession} />))}
+    <div className='flex flex-row flex-wrap gap-4'>
+      {studySessions?.map(studySession => (<StudySessionComponent studySession={studySession} subject_name={subject} />))}
     </div>
   )
 }

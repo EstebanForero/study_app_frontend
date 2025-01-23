@@ -1,5 +1,4 @@
 import StudySessionVisualizer from "./components/studySessionVisualizer"
-import StudyTopicTodayVisualizer from "./components/studyTopicTodayVisualizer"
 import StudyTopicVisualizer from "./components/studyTopicVisualizer"
 import SubjectVisualizer from "./components/subjectVisualizer"
 
@@ -11,8 +10,6 @@ function App() {
       <SubjectVisualizer />
       <p className="text-white font-semibold text-lg mb-3 ml-3">Your study topics</p>
       <StudyTopicVisualizer />
-      <p className="text-white font-semibold text-lg mb-3 ml-3 mt-10">Today you have to study this topics</p>
-      <StudyTopicTodayVisualizer />
       <p className="text-white font-semibold text-lg mb-3 ml-3 mt-10">Your study sessions</p>
       <StudySessionVisualizer />
     </div>

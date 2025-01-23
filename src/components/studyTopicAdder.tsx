@@ -9,7 +9,8 @@ const StudyTopicAdder = () => {
 
   const [studyTopicInfo, setStudyTopicInfo] = useState<StudyTopicInfo>({
     name: '',
-    description: ''
+    description: '',
+    subject_name: ''
   })
 
   const { data: subjects } = useQuery({
@@ -37,7 +38,7 @@ const StudyTopicAdder = () => {
     },
     onSettled: () => {
       queryClient.invalidateQueries({ queryKey: ["studyTopics"] })
-      queryClient.invalidateQueries({ queryKey: ["studyTopicsToday"] })
+      queryClient.invalidateQueries({ queryKey: [`study-session-${studyTopicInfo.subject_name}`] })
     }
   })
 
