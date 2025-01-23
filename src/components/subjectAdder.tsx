@@ -2,6 +2,7 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query'
 import React, { useState } from 'react'
 import { addSubject } from '../backend/backend'
+import { FaTrash } from "react-icons/fa";
 import { Subject } from '../backend/entities'
 
 const SubjectAdder = () => {
@@ -37,7 +38,7 @@ const SubjectAdder = () => {
       <input value={subjectName} onChange={(e) => setSubjectName(e.target.value)} className='bg-gray-800 outline-none rounded-xl px-4 h-8 text-white w-60'
         placeholder='subject name'
       />
-      <button className='bg-green-500 size-8 rounded-xl' onClick={() => addSubjectMutation.mutate(subjectName)}>+</button>
+      <button className='bg-green-500 size-9 rounded-xl' onClick={() => addSubjectMutation.mutate(subjectName)}>+</button>
     </div>
   )
 }

@@ -11,8 +11,10 @@ const SubjectVisualizer = () => {
   })
 
   return (
-    <div className='flex flex-row my-4'>
-      {subjects?.map(subject => <p className='text-white px-4 py-2 bg-blue-500'>{subject.subject_name}</p>)}
+    <div className='flex flex-row my-4 gap-4'>
+      {subjects?.map(subject => <p
+        className='text-white px-4 py-2 bg-blue-500 rounded-xl'
+      >{subject.subject_name}</p>)}
       <SubjectAdder />
     </div>
   )
