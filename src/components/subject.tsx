@@ -25,7 +25,8 @@ const SubjectComponent = ({ subject }: Props) => {
       queryClient.setQueryData(["subjects"], context?.previousStudyTopics)
     },
     onSettled: () => {
-      queryClient.invalidateQueries({ queryKey: ["subjectsToday"] })
+      queryClient.invalidateQueries({ queryKey: ["subjects"] })
+      queryClient.invalidateQueries({ queryKey: ["studyTopics"] })
     }
   })
 
