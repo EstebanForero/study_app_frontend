@@ -37,7 +37,10 @@ const StudyTopicComponent = ({ studyTopic }: Props) => {
         >Delete</button>
       </div>
       <p className="text-white grow bg-gray-800 rounded-xl p-4 my-4">{studyTopic.description ?? 'No description added to this topic'}</p>
-      <p className="text-white ml-3">Created at: {studyTopic.creation_date}</p>
+      <div className="flex flex-row justify-between">
+        <p className="text-white ml-3">{studyTopic.creation_date}</p>
+        <p className="text-white mr-4 bg-blue-500 rounded-lg px-3">{studyTopic.subject_name}</p>
+      </div>
     </div >
 
   )

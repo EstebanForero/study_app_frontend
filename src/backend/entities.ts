@@ -3,12 +3,14 @@ export type StudyTopic = {
   id: number,
   name: string,
   description: string | null,
-  creation_date: string
+  creation_date: string,
+  subject_name: string
 }
 
 export type StudyTopicInfo = {
   name: string,
   description: string | null,
+  subject_name: string
 }
 
 export type Subject = {

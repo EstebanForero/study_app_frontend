@@ -41,6 +41,12 @@ export async function addSubject(subjectName: string) {
   return await ky.post(`subject/${encodeURIComponent(subjectName)}`, { prefixUrl: baseUrl });
 }
 
+// Add a new subject
+export async function deleteSubject(subjectName: string) {
+  console.log(`Sending delete subject request: ${subjectName}`);
+  return await ky.delete(`subject/${encodeURIComponent(subjectName)}`, { prefixUrl: baseUrl });
+}
+
 // Fetch study topics for a specific subject
 export async function getStudyTopicsForSubject(subjectName: string): Promise<StudyTopic[]> {
   return await ky.get(`study_topic/subject/${encodeURIComponent(subjectName)}`, {

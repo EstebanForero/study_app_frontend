@@ -2,6 +2,7 @@
 import { useQuery } from '@tanstack/react-query'
 import { getSubjects } from '../backend/backend'
 import SubjectAdder from './subjectAdder'
+import SubjectComponent from './subject'
 
 const SubjectVisualizer = () => {
 
@@ -12,9 +13,7 @@ const SubjectVisualizer = () => {
 
   return (
     <div className='flex flex-row my-4 gap-4'>
-      {subjects?.map(subject => <p
-        className='text-white px-4 py-2 bg-blue-500 rounded-xl'
-      >{subject.subject_name}</p>)}
+      {subjects?.map(subject => <SubjectComponent key={subject.subject_name} subject={subject} />)}
       <SubjectAdder />
     </div>
   )
