@@ -25,6 +25,7 @@ const StudyTopicComponent = ({ studyTopic }: Props) => {
     },
     onSettled: () => {
       queryClient.invalidateQueries({ queryKey: ["studyTopicsToday"] })
+      queryClient.invalidateQueries({ queryKey: [`study-session-${studyTopic.subject_name}`] })
     }
   })
 
