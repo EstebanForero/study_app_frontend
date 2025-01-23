@@ -1,8 +1,7 @@
 
 import { useMutation, useQueryClient } from '@tanstack/react-query'
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { addSubject } from '../backend/backend'
-import { FaTrash } from "react-icons/fa";
 import { Subject } from '../backend/entities'
 
 const SubjectAdder = () => {
