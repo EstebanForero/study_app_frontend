@@ -1,9 +1,9 @@
 import ky from "ky";
 import { StudyTopic, StudyTopicInfo, Subject, StudySession } from "./entities";
 
-//const remoteUrl = "https://study-app-backend.fly.dev";
-const localUrl = "http://localhost:3000"
-const baseUrl = localUrl;
+const remoteUrl = "https://study-app-backend.fly.dev";
+//const localUrl = "http://localhost:3000"
+const baseUrl = remoteUrl;
 
 // Fetch all study topics
 export async function getStudyTopics(): Promise<StudyTopic[]> {
