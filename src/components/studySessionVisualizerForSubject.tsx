@@ -1,7 +1,7 @@
 
 import { useQuery } from '@tanstack/react-query'
-import React from 'react'
 import { getStudySessionsForSubject } from '../backend/backend'
+import StudySessionComponent from './studySessionComponent'
 
 type Props = {
   subject: string
@@ -11,12 +11,12 @@ const StudySessionVisualizerForSubject = ({ subject }: Props) => {
 
   const { data: studySessions } = useQuery({
     queryKey: [`study-session-${subject}`],
-    queryFn: getStudySessionsForSubject
+    queryFn: async () => await getStudySessionsForSubject(subject)
   })
 
   return (
     <div>
-      {}
+      {studySessions?.map(studySession => (<StudySessionComponent studySession={studySession} />))}
     </div>
   )
 }
