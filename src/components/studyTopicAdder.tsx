@@ -10,7 +10,7 @@ const StudyTopicAdder = () => {
   const [studyTopicInfo, setStudyTopicInfo] = useState<StudyTopicInfo>({
     name: '',
     description: '',
-    subject_name: ''
+    subject_name: '',
   })
 
   const { data: subjects } = useQuery({
@@ -28,7 +28,9 @@ const StudyTopicAdder = () => {
         id: Math.floor(Math.random() * 1000000),
         name: newStudyTopicInfo.name,
         description: newStudyTopicInfo.description,
-        creation_date: getCurrentDate()
+        creation_date: getCurrentDate(),
+        total_sessions: 0,
+        completed_sessions: 0,
       }])
 
       return { previousStudyTopics }

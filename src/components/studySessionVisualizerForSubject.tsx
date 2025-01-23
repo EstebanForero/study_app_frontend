@@ -16,7 +16,7 @@ const StudySessionVisualizerForSubject = ({ subject }: Props) => {
 
   return (
     <div className='flex flex-row flex-wrap gap-4'>
-      {studySessions?.map(studySession => (<StudySessionComponent studySession={studySession} subject_name={subject} />))}
+      {studySessions?.map(studySession => (<StudySessionComponent studySession={studySession} subject_name={subject} key={studySession.id} />))}
       {studySessions?.length == 0 && <div className='flex flex-col justify-center items-center w-full'>
         <h1 className='text-white mb-8'>
           !Congratulations, You already completed all of your study sessions

@@ -4,13 +4,15 @@ export type StudyTopic = {
   name: string,
   description: string | null,
   creation_date: string,
-  subject_name: string
+  subject_name: string,
+  total_sessions: number,
+  completed_sessions: number
 }
 
 export type StudyTopicInfo = {
   name: string,
   description: string | null,
-  subject_name: string
+  subject_name: string,
 }
 
 export type Subject = {

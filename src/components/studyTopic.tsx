@@ -40,6 +40,7 @@ const StudyTopicComponent = ({ studyTopic }: Props) => {
       <p className="text-white grow bg-gray-800 rounded-xl p-4 my-4">{studyTopic.description ?? 'No description added to this topic'}</p>
       <div className="flex flex-row justify-between">
         <p className="text-white ml-3">{studyTopic.creation_date}</p>
+        <p className={studyTopic.total_sessions == studyTopic.completed_sessions ? 'text-green-500' : 'text-red-500'}>{studyTopic.total_sessions} / {studyTopic.completed_sessions}</p>
         <p className="text-white mr-4 bg-blue-500 rounded-lg px-3">{studyTopic.subject_name}</p>
       </div>
     </div >
